@@ -8,8 +8,8 @@ class ItemMoveCallbackListener(val adapter: DragDropRecyclerAdapter) : ItemTouch
 
 
     override fun getMovementFlags(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder): Int {
-        val dragFlags = ItemTouchHelper.UP or ItemTouchHelper.DOWN
-        val swipeFlag = ItemTouchHelper.START
+        val dragFlags = ItemTouchHelper.UP or ItemTouchHelper.DOWN or ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+        val swipeFlag = ItemTouchHelper.UP
         return makeMovementFlags(dragFlags, swipeFlag)
     }
 
